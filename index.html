@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecomflows calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Calculator styles -->
+    <link href="ecomflows-calc-style.css" rel="stylesheet">
+    <!-- Calculator formula -->
+    <script src="ecomflows-calc-script.js"></script>
+
+  </head>
+  <body style="background-color: #04080F;">
+
+    <div class="container" id="ecomflows-calculator">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <form onsubmit="event.preventDefault();"> 
+            <div class="row" id="arrow-helper">
+
+              <div class="form-group col-md-4">
+                <label for="packagePlan">1. Choose your <span class="tablet-view"> package</span></label>
+                <select name="packagePlan" id="packagePlan" class="form-control" onchange="EcomFlowsCalc();">
+                  <option value="">Choose your package…</option>
+                  <option value="pro">Pro (8% from total revenue)</option>
+                  <option value="pro+">Pro+ (10% from total revenue)</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="packagePlan">2. Enter your <span class="tablet-view">monthly revenue</span></label>
+                <span class="" id="inputDollar1">
+                  <input type="number" id="monthlyRevenue" class="form-control" oninput="EcomFlowsCalc(); addDollarSign1();" placeholder="Enter your monthly revenue..." />
+                </span>
+              </div>
+
+              <div class="form-group col-md-4" id="arrow-sign">
+                <label for="packagePlan">3. Your Extra <span class="tablet-view">Monthly Revenue</span></label>
+                <input type="text" id="extraRevenue" name="extraRevenue" class="form-control" placeholder="Your extra montly revenue..." disbled />
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="easy-number-separator.js"></script>
+    <script>
+        // Commas
+        easyNumberSeparator({
+          selector: '.number-separator',
+          separator: ','
+        })
+    </script>
+
+  </body>
+</html>

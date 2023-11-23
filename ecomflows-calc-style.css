@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#ecomflows-calculator {
+	padding-top: 110px;
+	padding-bottom: 110px;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  background-color: #04080F;
+}
+
+#ecomflows-calculator label {
+	color: #FFF;
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: capitalize;
+	padding-bottom: 18px;
+}
+
+#ecomflows-calculator [type=number],
+#ecomflows-calculator [type=text],
+#ecomflows-calculator  select {
+	border-radius: 8px;
+	background-color: #0B0F1B;
+	border: 1px solid #19A0CD;
+	color: #fff;
+	font-size: 16px;
+	max-width: 300px;
+	max-height: 43px;
+}
+
+#monthlyRevenue {
+	padding-left: 26px;
+}
+
+input[name=extraRevenue] {
+    pointer-events: none;
+  }
+
+/* Dollar sign */
+.input-dollar {
+  position: relative;
+  color: white;
+}
+.input-dollar:before {
+    position: absolute;
+    top: 0;
+    content: "\20AC";
+    font-size: 18px;
+    font-weight: 400;
+    top: 43px;
+    left: -250px;
+    display: inline-block;
+    z-index: 999;
+}
+#inputDollar1:before {
+    display: inline-block;
+    z-index: 999;
+}
+
+/* Arrow */
+#arrow-helper,
+#arrow-sign {
+  position: relative;
+}
+
+#arrow-helper:before,
+#arrow-sign:before {
+  position: absolute;
+  left: -66px;
+  top: 50px;
+  width: auto;
+  height: auto;
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none"><path d="M28.7272 9.05378C29.1226 8.66817 29.1305 8.03505 28.7449 7.63968L22.461 1.19666C22.0754 0.801289 21.4422 0.793374 21.0469 1.17899C20.6515 1.5646 20.6436 2.19771 21.0292 2.59309L26.6149 8.32021L20.8878 13.9059C20.4924 14.2915 20.4845 14.9246 20.8701 15.32C21.2557 15.7154 21.8888 15.7233 22.2842 15.3377L28.7272 9.05378ZM0.9875 8.99992L28.0165 9.33781L28.0415 7.33797L1.0125 7.00008L0.9875 8.99992Z" fill="white"/></svg>');
+  display: block;
+}
+
+/* Placeholder */
+#ecomflows-calculator ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #d6e0f0;
+}
+#ecomflows-calculator ::-moz-placeholder { /* Firefox 19+ */
+  color: #d6e0f0;
+}
+#ecomflows-calculator :-ms-input-placeholder { /* IE 10+ */
+  color: #d6e0f0;
+}
+#ecomflows-calculator :-moz-placeholder { /* Firefox 18- */
+  color: #d6e0f0;
+}
+
+/* Remove arrows */
+#ecomflows-calculator input::-webkit-outer-spin-button,
+#ecomflows-calculator input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#ecomflows-calculator input[type=number],
+#ecomflows-calculator input[type=text] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+/* MEDIA QUERY */
+/* LAPTOP */
+@media (min-width: 1400px) {}
+
+/* small LAPTOP */
+@media (max-width: 1024px){
+  #arrow-sign:before {
+    display: none;
+  }
+}
+
+/* TABLET */
+@media (max-width: 768px){
+  .tablet-view {
+    display: block;
+  }
+  #extraRevenue:before {
+    display: none;
+  }
+  .input-dollar:before {
+    left: -137px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 475px) {
+  .tablet-view {
+    display: inline-block;
+  }
+  #ecomflows-calculator .form-group  {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  #ecomflows-calculator  .form-control {
+    display: inline-block;
+  }
+  #ecomflows-calculator [type=number], #ecomflows-calculator [type=text], #ecomflows-calculator select {
+    max-width: 266px;
+  }
+  .input-dollar:before {
+     left: -253px;
+  }
+}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+
+
