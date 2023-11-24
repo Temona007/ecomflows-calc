@@ -32,10 +32,6 @@
 	max-height: 43px;
 }
 
-#monthlyRevenue {
-	padding-left: 26px;
-}
-
 input[name=extraRevenue] {
     pointer-events: none;
   }

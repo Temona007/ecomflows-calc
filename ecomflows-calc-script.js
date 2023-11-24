@@ -51,5 +51,5 @@ function numberWithCommas(x) {
 function addDollarSign1() {
 	let inputDollar = document.getElementById("inputDollar1");
 	inputDollar.className += " input-dollar";
-	//document.getElementById("totalRevenue").style.paddingLeft = '25px';
+	document.getElementById("monthlyRevenue").style.paddingLeft = '26px';
 }
