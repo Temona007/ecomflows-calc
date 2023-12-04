@@ -31,6 +31,10 @@ function EcomFlowsCalc() {
 	    console.log(packagePlan);
 	    extraRevenue = monthlyRevenue * 0.1;
 	    break;
+	  case 'elite':
+	    console.log(packagePlan);
+	    extraRevenue = monthlyRevenue * 0.13;
+	    break;
 	  default:
 	    console.log(`Sorry, service not avaliable ...`);
 	    extraRevenue = monthlyRevenue;
